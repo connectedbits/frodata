@@ -24,8 +24,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'faraday',  '~> 0.15'
   spec.add_dependency 'andand',   '~> 1.3'
 
-  spec.add_development_dependency 'bundler', '~> 1.6'
-  spec.add_development_dependency 'rake', '~> 0'
+  spec.add_development_dependency 'bundler', '>= 2.6'
+  spec.add_development_dependency 'rake', '>= 13.2'
   spec.add_development_dependency 'simplecov', '~> 0.15'
   spec.add_development_dependency 'rspec', '~> 3.7'
   spec.add_development_dependency 'rspec-autotest', '~> 1.0'
