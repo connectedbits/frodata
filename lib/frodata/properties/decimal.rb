@@ -5,7 +5,7 @@ module FrOData
       # Returns the property value, properly typecast
       # @return [BigDecimal,nil]
       def value
-        if (@value.nil? || @value.empty?) && (strict? && allows_nil?)
+        if (@value.nil? || (@value.respond_to?(:empty?) && @value.empty?)) && (strict? && allows_nil?)
           nil
         else
           BigDecimal(@value)
@@ -15,8 +15,9 @@ module FrOData
       # Sets the property value
       # @params new_value something BigDecimal() can parse
       def value=(new_value)
-        validate(BigDecimal(new_value.to_s))
-        @value = new_value.to_s
+        cleaned_value = clean_value(new_value)
+        validate(BigDecimal(cleaned_value))
+        @value = cleaned_value
       end
 
       # The FrOData type name
@@ -31,6 +32,17 @@ module FrOData
       end
 
       private
+
+      # Single pass cleaning a value to make it into a number based on the
+      # specs in decimal_spec.rb.
+      def clean_value(value)
+        BigDecimal(value) # Trigger any underlying exceptions.
+        value
+      rescue ArgumentError
+        clean_value = value.to_s.sub(/[^.[:digit:]].*/, "")
+        clean_value = "0" if clean_value.bytesize == 0
+        clean_value
+      end
 
       def validate(value)
         if value > max_value || value < min_value || value.precs.first > 29
