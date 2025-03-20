@@ -5,7 +5,6 @@ require 'bigdecimal'
 require 'nokogiri'
 require 'faraday'
 require 'logger'
-require 'andand'
 require 'json'
 
 # require 'active_support'

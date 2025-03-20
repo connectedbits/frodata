@@ -105,7 +105,7 @@ module FrOData
         # @param options [Hash]
         # @return [FrOData::Properties::Geography]
         def self.from_xml(property_xml, options = {})
-          if property_xml.attributes['null'].andand.value == 'true'
+          if property_xml.attributes['null']&.value == 'true'
             content = nil
           else
             content = parse_xml(property_xml)

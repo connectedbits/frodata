@@ -15,7 +15,7 @@ module FrOData
         end
 
         def error_message
-          result_xml.xpath('//error/message').first.andand.text
+          result_xml.xpath('//error/message').first&.text
         end
 
         def parsed_body

@@ -90,8 +90,8 @@ module FrOData
 
     def property_names
       [
-        @properties_xml_value.andand.keys,
-        @properties.andand.keys
+        @properties_xml_value&.keys,
+        @properties&.keys
       ].compact.flatten
     end
 
@@ -205,7 +205,7 @@ module FrOData
     # @return [String]
     def id
       @id ||= lambda {
-        entity_set = self.entity_set.andand.name
+        entity_set = self.entity_set&.name
         entity_set ||= context.split('#').last.split('/').first
         "#{entity_set}(#{self[primary_key]})"
       }.call
@@ -279,7 +279,8 @@ module FrOData
     def self.process_properties(entity, xml_doc)
       entity.instance_eval do
         unless instance_variable_get(:@context)
-          context = xml_doc.xpath('/entry').first.andand['context']
+          first_entry = xml_doc.xpath('/entry').first
+          context = first_entry['context'] if first_entry
           instance_variable_set(:@context, context)
         end
 

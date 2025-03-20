@@ -31,7 +31,7 @@ module FrOData
       # Value to be used in JSON.
       # @return [String]
       def xml_value
-        @value.andand.sub(/[\+\-]00:00$/, 'Z')
+        @value&.sub(/[\+\-]00:00$/, 'Z')
       end
 
       # Value to be used in JSON.

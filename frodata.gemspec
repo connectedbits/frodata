@@ -22,7 +22,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'nokogiri', '~> 1.8'
   spec.add_dependency 'faraday',  '~> 0.15'
-  spec.add_dependency 'andand',   '~> 1.3'
   spec.add_dependency 'bigdecimal'
   spec.add_dependency 'base64'
   spec.add_dependency 'logger'

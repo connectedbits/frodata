@@ -86,7 +86,7 @@ module FrOData
       def collect_members
         Hash[type_definition.xpath('./Member').map.with_index do |member_xml, index|
           member_name  = member_xml.attributes['Name'].value
-          member_value = member_xml.attributes['Value'].andand.value.andand.to_i
+          member_value = member_xml.attributes['Value']&.value&.to_i
           [member_value || index, member_name]
         end]
       end

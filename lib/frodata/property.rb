@@ -100,7 +100,7 @@ module FrOData
     # @param options [Hash]
     # @return [FrOData::Property]
     def self.from_xml(property_xml, options = {})
-      if property_xml.attributes['null'].andand.value == 'true'
+      if property_xml.attributes['null']&.value == 'true'
         content = nil
       else
         content = property_xml.content
@@ -124,7 +124,7 @@ module FrOData
 
     def logger
       # Use a dummy logger if service is not available (-> unit tests)
-      @logger ||= service.andand.logger || Logger.new('/dev/null')
+      @logger ||= service&.logger || Logger.new('/dev/null')
     end
 
     def validation_error(message)
