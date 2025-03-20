@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'andand',   '~> 1.3'
   spec.add_dependency 'bigdecimal'
   spec.add_dependency 'base64'
+  spec.add_dependency 'logger'
 
   spec.add_development_dependency 'bundler', '>= 2.6'
   spec.add_development_dependency 'rake', '>= 13.2'
