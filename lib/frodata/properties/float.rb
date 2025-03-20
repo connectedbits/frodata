@@ -21,11 +21,6 @@ module FrOData
         @value = new_value.to_f.to_s
       end
 
-      # The FrOData type name
-      def type
-        'Edm.Double'
-      end
-
       private
 
       def min_value
@@ -38,7 +33,12 @@ module FrOData
     end
 
     # Defines the Double (Float) FrOData type.
-    class Double < FrOData::Properties::Float; end
+    class Double < FrOData::Properties::Float
+      # The FrOData type name
+      def type
+        'Edm.Double'
+      end
+    end
 
     # Defines the Single (Float) FrOData type.
     class Single < FrOData::Properties::Float
