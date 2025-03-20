@@ -1,5 +1,5 @@
 {
-    "@odata.context": "http://services.odata.org/V4/OData/OData.svc/$metadata#Suppliers/$entity",
+    "@odata.context": "https://services.odata.org/V4/OData/OData.svc/$metadata#Suppliers/$entity",
     "ID": 0,
     "Name": "Exotic Liquids",
     "Address": {

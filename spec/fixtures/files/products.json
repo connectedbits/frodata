@@ -1,5 +1,5 @@
 {
-  "@odata.context": "http://services.odata.org/V4/OData/OData.svc/$metadata#Products",
+  "@odata.context": "https://services.odata.org/V4/OData/OData.svc/$metadata#Products",
   "value": [
     {
       "ID": 0,

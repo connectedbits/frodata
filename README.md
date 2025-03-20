@@ -44,14 +44,14 @@ The nice thing about `FrOData::Service` is that it automatically registers with 
 To create an `FrOData::Service` simply provide the location of a service endpoint to it like this:
 
 ```ruby
-  FrOData::Service.new('http://services.odata.org/V4/OData/OData.svc')
+  FrOData::Service.new('https://services.odata.org/V4/OData/OData.svc')
 ```
 
 You may also provide an options hash after the URL.
 It is suggested that you supply a name for the service via this hash like so:
 
 ```ruby
-  FrOData::Service.new('http://services.odata.org/V4/OData/OData.svc', name: 'ODataDemo')
+  FrOData::Service.new('https://services.odata.org/V4/OData/OData.svc', name: 'ODataDemo')
 ```
 
 For more information regarding available options and how to configure a service instance, refer to [Service Configuration](#service-configuration) below.
@@ -63,7 +63,7 @@ Both of these methods are available on instances and will allow for lookup in th
 Using either the service URL or the name provided as an option when creating an `FrOData::Service` will allow for quick lookup in the `FrOData::ServiceRegistry` like such:
 
 ```ruby
-  FrOData::ServiceRegistry['http://services.odata.org/V4/OData/OData.svc']
+  FrOData::ServiceRegistry['https://services.odata.org/V4/OData/OData.svc']
   FrOData::ServiceRegistry['ODataDemo']
 ```
 
@@ -80,7 +80,7 @@ You can speed your load time by forcing the service to load the metadata from a 
 This is only recommended for testing purposes, as the metadata file can change.
 
 ```ruby
-  service = FrOData::Service.new('http://services.odata.org/V4/OData/OData.svc', {
+  service = FrOData::Service.new('https://services.odata.org/V4/OData/OData.svc', {
     name: 'ODataDemo',
     metadata_file: "metadata.xml",
   })
@@ -97,7 +97,7 @@ You can customize request headers with the **:connection** option key.
 This allows you to e.g. set custom headers (such as `Authorization`) that may be required by your service.
 
 ```ruby
-  service = FrOData::Service.new('http://services.odata.org/V4/OData/OData.svc', {
+  service = FrOData::Service.new('https://services.odata.org/V4/OData/OData.svc', {
     name: 'ODataDemo',
     connection: {
       headers: {
@@ -115,7 +115,7 @@ This allows you to make use of Faraday's [authentication helpers][faraday-auth],
 For instance, if your service requires HTTP basic authentication:
 
 ```ruby
-  service = FrOData::Service.new('http://services.odata.org/V4/OData/OData.svc', {
+  service = FrOData::Service.new('https://services.odata.org/V4/OData/OData.svc', {
     name: 'ODataDemo'
   }) do |conn|
     conn.basic_auth('username', 'password')
@@ -139,7 +139,7 @@ If you already have a `Faraday::Connection` instance that you want the service t
 In this case, you'll be setting the service URL on the connection object, as shown below:
 
 ```ruby
-  conn = Faraday.new('http://services.odata.org/V4/OData/OData.svc') do |conn|
+  conn = Faraday.new('https://services.odata.org/V4/OData/OData.svc') do |conn|
     # ... customize connection ...
   end
 
@@ -154,7 +154,7 @@ Alternatively, the connection object is also `yield`ed by the constructor, so yo
 For instance, if you wanted to use [Typhoeus][typhoeus] as your HTTP library:
 
 ```ruby
-  service = FrOData::Service.new('http://services.odata.org/V4/OData/OData.svc', {
+  service = FrOData::Service.new('https://services.odata.org/V4/OData/OData.svc', {
     name: 'ODataDemo'
   }) do |conn|
     conn.adapter :typhoeus
@@ -226,7 +226,7 @@ Under normal circumstances you should never need to worry about an `FrOData::Ent
 For example, to get an `FrOData::EntitySet` for the products in the ODataDemo service simply access the entity set through the service like this:
 
 ```ruby
-  service = FrOData::Service.new('http://services.odata.org/V4/OData/OData.svc')
+  service = FrOData::Service.new('https://services.odata.org/V4/OData/OData.svc')
   products = service['ProductsSet'] # => FrOData::EntitySet
 ```
 
@@ -352,7 +352,7 @@ Simply add `strict: false` to the service constructor options.
 In this mode, any property validation error will log a warning instead of raising an exception. The corresponding property value will be `nil` (even if the property is declared as not allowing NULL values).
 
 ```ruby
-  service = FrOData::Service.new('http://services.odata.org/V4/OData/OData.svc', strict: false)
+  service = FrOData::Service.new('https://services.odata.org/V4/OData/OData.svc', strict: false)
   # -- alternatively, for an existing service instance --
   service.options[:strict] = false
 ```

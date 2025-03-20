@@ -23,7 +23,7 @@ end
 describe FrOData::Service::Response, vcr: {cassette_name: 'service/response_specs'} do
   let(:subject) { FrOData::Service::Response.new(service, entity_set.query) { response } }
   let(:service) { FrOData::Service.new(service_url, name: 'ODataDemo', metadata_file: metadata_file) }
-  let(:service_url) { 'http://services.odata.org/V4/OData/OData.svc' }
+  let(:service_url) { 'https://services.odata.org/V4/OData/OData.svc' }
   let(:metadata_file) { 'spec/fixtures/files/metadata.xml' }
   let(:entity_set) { service['Products'] }
   let(:response) do

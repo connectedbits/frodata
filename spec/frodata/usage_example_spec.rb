@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'Usage examples', vcr: { cassette_name: 'usage_example_specs' } do
-  let(:service_url) { 'http://services.odata.org/V4/OData/OData.svc' }
+  let(:service_url) { 'https://services.odata.org/V4/OData/OData.svc' }
   let(:service) { FrOData::Service.new(service_url, name: 'ODataDemo') }
 
   describe 'getting information' do

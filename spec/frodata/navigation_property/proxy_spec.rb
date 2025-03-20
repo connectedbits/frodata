@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe FrOData::NavigationProperty::Proxy, vcr: {cassette_name: 'navigation_property_proxy_specs'} do
   before :each do
-    FrOData::Service.new('http://services.odata.org/V4/OData/OData.svc', name: 'ODataDemo')
+    FrOData::Service.new('https://services.odata.org/V4/OData/OData.svc', name: 'ODataDemo')
   end
 
   let(:entity) { FrOData::ServiceRegistry['ODataDemo']['Products'][1] }

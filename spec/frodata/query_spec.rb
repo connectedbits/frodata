@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe FrOData::Query, vcr: {cassette_name: 'query_specs'} do
   before(:example) do
-    FrOData::Service.new('http://services.odata.org/V4/OData/OData.svc', name: 'ODataDemo')
+    FrOData::Service.new('https://services.odata.org/V4/OData/OData.svc', name: 'ODataDemo')
   end
 
   let(:subject) { FrOData::Query.new(entity_set) }

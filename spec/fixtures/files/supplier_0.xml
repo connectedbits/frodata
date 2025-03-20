@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<entry xml:base="http://services.odata.org/V4/OData/OData.svc/" xmlns="http://www.w3.org/2005/Atom" xmlns:d="http://docs.oasis-open.org/odata/ns/data" xmlns:m="http://docs.oasis-open.org/odata/ns/metadata" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml" m:context="http://services.odata.org/V4/OData/OData.svc/$metadata#Suppliers/$entity" m:etag="W/&quot;0&quot;">
-  <id>http://services.odata.org/V4/OData/OData.svc/Suppliers(0)</id>
+<entry xml:base="https://services.odata.org/V4/OData/OData.svc/" xmlns="http://www.w3.org/2005/Atom" xmlns:d="http://docs.oasis-open.org/odata/ns/data" xmlns:m="http://docs.oasis-open.org/odata/ns/metadata" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml" m:context="https://services.odata.org/V4/OData/OData.svc/$metadata#Suppliers/$entity" m:etag="W/&quot;0&quot;">
+  <id>https://services.odata.org/V4/OData/OData.svc/Suppliers(0)</id>
   <category term="#ODataDemo.Supplier" scheme="http://docs.oasis-open.org/odata/ns/scheme" />
   <link rel="edit" title="Supplier" href="Suppliers(0)" />
   <link rel="http://docs.oasis-open.org/odata/ns/relatedlinks/Products" type="application/xml" title="Products" href="Suppliers(0)/Products/$ref" />

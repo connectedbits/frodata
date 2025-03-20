@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe FrOData::Schema::EnumType, vcr: {cassette_name: 'schema/enum_type_specs'} do
   before(:example) do
-    FrOData::Service.new('http://services.odata.org/V4/OData/OData.svc', name: 'ODataDemo', metadata_file: metadata_file)
+    FrOData::Service.new('https://services.odata.org/V4/OData/OData.svc', name: 'ODataDemo', metadata_file: metadata_file)
   end
 
   let(:metadata_file) { 'spec/fixtures/files/metadata.xml' }

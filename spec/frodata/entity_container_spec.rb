@@ -3,7 +3,7 @@ require 'spec_helper'
 describe FrOData::EntityContainer do
   let(:subject) { FrOData::EntityContainer.new(service) }
   let(:service) do
-    FrOData::Service.new('http://services.odata.org/V4/OData/OData.svc', metadata_file: metadata_file)
+    FrOData::Service.new('https://services.odata.org/V4/OData/OData.svc', metadata_file: metadata_file)
   end
   let(:metadata_file) { 'spec/fixtures/files/metadata.xml' }
 

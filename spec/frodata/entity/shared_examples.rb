@@ -5,7 +5,7 @@ shared_examples 'a valid product' do
   it { expect(subject.type).to eq('ODataDemo.Product') }
   it { expect(subject.namespace).to eq('ODataDemo') }
   it { expect(subject.service_name).to eq('ODataDemo') }
-  it { expect(subject.context).to eq('http://services.odata.org/V4/OData/OData.svc/$metadata#Products/$entity') }
+  it { expect(subject.context).to eq('https://services.odata.org/V4/OData/OData.svc/$metadata#Products/$entity') }
   it { expect(subject.id).to eq('Products(0)') }
 
   # Check property types
@@ -59,7 +59,7 @@ shared_examples 'a valid supplier' do
   it { expect(subject.type).to eq('ODataDemo.Supplier') }
   it { expect(subject.namespace).to eq('ODataDemo') }
   it { expect(subject.service_name).to eq('ODataDemo') }
-  it { expect(subject.context).to eq('http://services.odata.org/V4/OData/OData.svc/$metadata#Suppliers/$entity') }
+  it { expect(subject.context).to eq('https://services.odata.org/V4/OData/OData.svc/$metadata#Suppliers/$entity') }
   it { expect(subject.id).to eq('Suppliers(0)') }
 
   # Check property types

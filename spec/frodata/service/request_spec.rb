@@ -3,12 +3,12 @@ require 'spec_helper'
 describe FrOData::Service::Request, vcr: {cassette_name: 'service/request_specs'} do
   let(:subject) { FrOData::Service::Request.new(service, 'Products') }
   let(:service) { FrOData::Service.new(service_url, name: 'ODataDemo', metadata_file: metadata_file) }
-  let(:service_url) { 'http://services.odata.org/V4/OData/OData.svc' }
+  let(:service_url) { 'https://services.odata.org/V4/OData/OData.svc' }
   let(:metadata_file) { 'spec/fixtures/files/metadata.xml' }
 
   describe '#url' do
     it 'returns the full request URL' do
-      expect(subject.url).to eq('http://services.odata.org/V4/OData/OData.svc/Products')
+      expect(subject.url).to eq('https://services.odata.org/V4/OData/OData.svc/Products')
     end
 
     it 'properly escapes control characters' do

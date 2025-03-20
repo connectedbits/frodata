@@ -2,48 +2,48 @@
 http_interactions:
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/$metadata
+    uri: https://services.odata.org/V4/OData/OData.svc/$metadata
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v0.17.6
       OData-Version:
       - '4.0'
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
+      content-length:
       - '6742'
-      Content-Type:
+      connection:
+      - close
+      content-type:
       - application/xml;charset=utf-8
-      Server:
+      date:
+      - Thu, 20 Mar 2025 17:53:08 GMT
+      server:
       - Microsoft-IIS/10.0
-      X-Content-Type-Options:
-      - nosniff
-      OData-Version:
-      - 4.0;
-      X-AspNet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
+      access-control-allow-headers:
       - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
       - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:31:42 GMT
+      cache-control:
+      - no-cache
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"><edmx:DataServices><Schema
@@ -122,225 +122,215 @@ http_interactions:
         String="http://www.odata.org/" /><Annotation Term="Org.OData.Publication.V1.LastModified"
         String="4/2/2013" /><Annotation Term="Org.OData.Publication.V1.ImageUrl "
         String="http://www.odata.org/" /></Annotations></Schema></edmx:DataServices></edmx:Edmx>
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/$metadata
-  recorded_at: Tue, 16 Jan 2018 20:31:43 GMT
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:08 GMT
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products(1)
+    uri: https://services.odata.org/V4/OData/OData.svc/Products(1)
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v0.17.6
       OData-Version:
       - '4.0'
-      Accept:
-      - application/atom+xml,application/json,text/plain
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
-      - '226'
-      Content-Type:
+      content-length:
+      - '227'
+      connection:
+      - close
+      content-type:
       - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      Server:
+      date:
+      - Thu, 20 Mar 2025 17:53:08 GMT
+      server:
       - Microsoft-IIS/10.0
-      X-Content-Type-Options:
-      - nosniff
-      OData-Version:
-      - 4.0;
-      X-AspNet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
+      access-control-allow-headers:
       - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
       - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:31:42 GMT
+      cache-control:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
     body:
-      encoding: UTF-8
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products/$entity","ID":1,"Name":"Milk","Description":"Low
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://services.odata.org/V4/OData/OData.svc/$metadata#Products/$entity","ID":1,"Name":"Milk","Description":"Low
         fat milk","ReleaseDate":"1995-10-01T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":3.5}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/Products(1)
-  recorded_at: Tue, 16 Jan 2018 20:31:43 GMT
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:08 GMT
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products(1)/Supplier
+    uri: https://services.odata.org/V4/OData/OData.svc/Products(1)/Categories
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v0.17.6
       OData-Version:
       - '4.0'
-      Accept:
-      - application/atom+xml,application/json,text/plain
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
-      - '372'
-      Content-Type:
+      content-length:
+      - '148'
+      connection:
+      - close
+      content-type:
       - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      ETag:
+      date:
+      - Thu, 20 Mar 2025 17:53:08 GMT
+      server:
+      - Microsoft-IIS/10.0
+      access-control-allow-headers:
+      - Accept, Origin, Content-Type, MaxDataServiceVersion
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - DataServiceVersion
+      cache-control:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://services.odata.org/V4/OData/OData.svc/$metadata#Categories","value":[{"ID":0,"Name":"Food"},{"ID":1,"Name":"Beverages"}]}'
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:09 GMT
+- request:
+    method: get
+    uri: https://services.odata.org/V4/OData/OData.svc/Products(1)/Supplier
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.6
+      OData-Version:
+      - '4.0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-length:
+      - '397'
+      connection:
+      - close
+      content-type:
+      - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
+      date:
+      - Thu, 20 Mar 2025 17:53:09 GMT
+      server:
+      - Microsoft-IIS/10.0
+      access-control-allow-headers:
+      - Accept, Origin, Content-Type, MaxDataServiceVersion
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - DataServiceVersion
+      cache-control:
+      - no-cache
+      etag:
       - W/"0"
-      Server:
-      - Microsoft-IIS/10.0
-      X-Content-Type-Options:
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
       - nosniff
-      OData-Version:
+      odata-version:
       - 4.0;
-      X-AspNet-Version:
+      x-aspnet-version:
       - 4.0.30319
-      X-Powered-By:
+      x-powered-by:
       - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
-      - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
-      - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:31:42 GMT
     body:
-      encoding: UTF-8
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Suppliers/$entity","ID":0,"Name":"Exotic
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://services.odata.org/V4/OData/OData.svc/$metadata#Suppliers/$entity","@odata.etag":"W/\"0\"","ID":0,"Name":"Exotic
         Liquids","Address":{"Street":"NE 228th","City":"Sammamish","State":"WA","ZipCode":"98074","Country":"USA"},"Location":{"type":"Point","coordinates":[-122.03547668457,47.6316604614258],"crs":{"type":"name","properties":{"name":"EPSG:4326"}}},"Concurrency":0}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/Products(1)/Supplier
-  recorded_at: Tue, 16 Jan 2018 20:31:43 GMT
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:09 GMT
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products(1)/ProductDetail
+    uri: https://services.odata.org/V4/OData/OData.svc/Products(1)/ProductDetail
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v0.17.6
       OData-Version:
       - '4.0'
-      Accept:
-      - application/atom+xml,application/json,text/plain
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
-      - '145'
-      Content-Type:
+      content-length:
+      - '146'
+      connection:
+      - close
+      content-type:
       - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      Server:
+      date:
+      - Thu, 20 Mar 2025 17:53:09 GMT
+      server:
       - Microsoft-IIS/10.0
-      X-Content-Type-Options:
-      - nosniff
-      OData-Version:
-      - 4.0;
-      X-AspNet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
+      access-control-allow-headers:
       - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
       - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:31:43 GMT
+      cache-control:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
     body:
-      encoding: UTF-8
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#ProductDetails/$entity","ProductID":1,"Details":"Details
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://services.odata.org/V4/OData/OData.svc/$metadata#ProductDetails/$entity","ProductID":1,"Details":"Details
         of product 1"}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/Products(1)/ProductDetail
-  recorded_at: Tue, 16 Jan 2018 20:31:43 GMT
-- request:
-    method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products(1)/Categories
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-      OData-Version:
-      - '4.0'
-      Accept:
-      - application/atom+xml,application/json,text/plain
-      Expect:
-      - ''
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
-      - '147'
-      Content-Type:
-      - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      Server:
-      - Microsoft-IIS/10.0
-      X-Content-Type-Options:
-      - nosniff
-      OData-Version:
-      - 4.0;
-      X-AspNet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
-      - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
-      - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:31:43 GMT
-    body:
-      encoding: UTF-8
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Categories","value":[{"ID":0,"Name":"Food"},{"ID":1,"Name":"Beverages"}]}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/Products(1)/Categories
-  recorded_at: Tue, 16 Jan 2018 20:31:43 GMT
-recorded_with: VCR 2.9.3
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:09 GMT
+recorded_with: VCR 4.0.0

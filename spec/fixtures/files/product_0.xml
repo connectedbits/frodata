@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<entry xml:base="http://services.odata.org/V4/OData/OData.svc/" xmlns="http://www.w3.org/2005/Atom" xmlns:d="http://docs.oasis-open.org/odata/ns/data" xmlns:m="http://docs.oasis-open.org/odata/ns/metadata" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml" m:context="http://services.odata.org/V4/OData/OData.svc/$metadata#Products/$entity">
-  <id>http://services.odata.org/V4/OData/OData.svc/Products(0)</id>
+<entry xml:base="https://services.odata.org/V4/OData/OData.svc/" xmlns="http://www.w3.org/2005/Atom" xmlns:d="http://docs.oasis-open.org/odata/ns/data" xmlns:m="http://docs.oasis-open.org/odata/ns/metadata" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml" m:context="https://services.odata.org/V4/OData/OData.svc/$metadata#Products/$entity">
+  <id>https://services.odata.org/V4/OData/OData.svc/Products(0)</id>
   <category term="#ODataDemo.Product" scheme="http://docs.oasis-open.org/odata/ns/scheme" />
   <link rel="edit" title="Product" href="Products(0)" />
   <link rel="http://docs.oasis-open.org/odata/ns/relatedlinks/Categories" type="application/xml" title="Categories" href="Products(0)/Categories/$ref" />

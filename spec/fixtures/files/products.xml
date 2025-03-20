@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xml:base="http://services.odata.org/V4/OData/OData.svc/" xmlns="http://www.w3.org/2005/Atom" xmlns:d="http://docs.oasis-open.org/odata/ns/data" xmlns:m="http://docs.oasis-open.org/odata/ns/metadata" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml" m:context="http://services.odata.org/V4/OData/OData.svc/$metadata#Products">
-    <id>http://services.odata.org/V4/OData/OData.svc/Products</id>
+<feed xml:base="https://services.odata.org/V4/OData/OData.svc/" xmlns="http://www.w3.org/2005/Atom" xmlns:d="http://docs.oasis-open.org/odata/ns/data" xmlns:m="http://docs.oasis-open.org/odata/ns/metadata" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml" m:context="https://services.odata.org/V4/OData/OData.svc/$metadata#Products">
+    <id>https://services.odata.org/V4/OData/OData.svc/Products</id>
     <title type="text">Products</title>
     <updated>2017-12-07T23:31:33Z</updated>
     <link rel="self" title="Products" href="Products" />
     <entry>
-        <id>http://services.odata.org/V4/OData/OData.svc/Products(0)</id>
+        <id>https://services.odata.org/V4/OData/OData.svc/Products(0)</id>
         <category term="#ODataDemo.Product" scheme="http://docs.oasis-open.org/odata/ns/scheme" />
         <link rel="edit" title="Product" href="Products(0)" />
         <link rel="http://docs.oasis-open.org/odata/ns/relatedlinks/Categories" type="application/xml" title="Categories" href="Products(0)/Categories/$ref" />
@@ -32,7 +32,7 @@
         </content>
     </entry>
     <entry>
-        <id>http://services.odata.org/V4/OData/OData.svc/Products(1)</id>
+        <id>https://services.odata.org/V4/OData/OData.svc/Products(1)</id>
         <category term="#ODataDemo.Product" scheme="http://docs.oasis-open.org/odata/ns/scheme" />
         <link rel="edit" title="Product" href="Products(1)" />
         <link rel="http://docs.oasis-open.org/odata/ns/relatedlinks/Categories" type="application/xml" title="Categories" href="Products(1)/Categories/$ref" />
@@ -59,7 +59,7 @@
         </content>
     </entry>
     <entry>
-        <id>http://services.odata.org/V4/OData/OData.svc/Products(2)</id>
+        <id>https://services.odata.org/V4/OData/OData.svc/Products(2)</id>
         <category term="#ODataDemo.Product" scheme="http://docs.oasis-open.org/odata/ns/scheme" />
         <link rel="edit" title="Product" href="Products(2)" />
         <link rel="http://docs.oasis-open.org/odata/ns/relatedlinks/Categories" type="application/xml" title="Categories" href="Products(2)/Categories/$ref" />
@@ -86,7 +86,7 @@
         </content>
     </entry>
     <entry>
-        <id>http://services.odata.org/V4/OData/OData.svc/Products(3)</id>
+        <id>https://services.odata.org/V4/OData/OData.svc/Products(3)</id>
         <category term="#ODataDemo.Product" scheme="http://docs.oasis-open.org/odata/ns/scheme" />
         <link rel="edit" title="Product" href="Products(3)" />
         <link rel="http://docs.oasis-open.org/odata/ns/relatedlinks/Categories" type="application/xml" title="Categories" href="Products(3)/Categories/$ref" />
@@ -113,7 +113,7 @@
         </content>
     </entry>
     <entry>
-        <id>http://services.odata.org/V4/OData/OData.svc/Products(4)</id>
+        <id>https://services.odata.org/V4/OData/OData.svc/Products(4)</id>
         <category term="#ODataDemo.Product" scheme="http://docs.oasis-open.org/odata/ns/scheme" />
         <link rel="edit" title="Product" href="Products(4)" />
         <link rel="http://docs.oasis-open.org/odata/ns/relatedlinks/Categories" type="application/xml" title="Categories" href="Products(4)/Categories/$ref" />
@@ -140,7 +140,7 @@
         </content>
     </entry>
     <entry>
-        <id>http://services.odata.org/V4/OData/OData.svc/Products(5)</id>
+        <id>https://services.odata.org/V4/OData/OData.svc/Products(5)</id>
         <category term="#ODataDemo.Product" scheme="http://docs.oasis-open.org/odata/ns/scheme" />
         <link rel="edit" title="Product" href="Products(5)" />
         <link rel="http://docs.oasis-open.org/odata/ns/relatedlinks/Categories" type="application/xml" title="Categories" href="Products(5)/Categories/$ref" />
@@ -167,7 +167,7 @@
         </content>
     </entry>
     <entry>
-        <id>http://services.odata.org/V4/OData/OData.svc/Products(6)</id>
+        <id>https://services.odata.org/V4/OData/OData.svc/Products(6)</id>
         <category term="#ODataDemo.Product" scheme="http://docs.oasis-open.org/odata/ns/scheme" />
         <link rel="edit" title="Product" href="Products(6)" />
         <link rel="http://docs.oasis-open.org/odata/ns/relatedlinks/Categories" type="application/xml" title="Categories" href="Products(6)/Categories/$ref" />
@@ -194,7 +194,7 @@
         </content>
     </entry>
     <entry>
-        <id>http://services.odata.org/V4/OData/OData.svc/Products(7)</id>
+        <id>https://services.odata.org/V4/OData/OData.svc/Products(7)</id>
         <category term="#ODataDemo.Product" scheme="http://docs.oasis-open.org/odata/ns/scheme" />
         <link rel="edit" title="Product" href="Products(7)" />
         <link rel="http://docs.oasis-open.org/odata/ns/relatedlinks/Categories" type="application/xml" title="Categories" href="Products(7)/Categories/$ref" />
@@ -221,7 +221,7 @@
         </content>
     </entry>
     <entry>
-        <id>http://services.odata.org/V4/OData/OData.svc/Products(8)</id>
+        <id>https://services.odata.org/V4/OData/OData.svc/Products(8)</id>
         <category term="#ODataDemo.Product" scheme="http://docs.oasis-open.org/odata/ns/scheme" />
         <link rel="edit" title="Product" href="Products(8)" />
         <link rel="http://docs.oasis-open.org/odata/ns/relatedlinks/Categories" type="application/xml" title="Categories" href="Products(8)/Categories/$ref" />
@@ -248,7 +248,7 @@
         </content>
     </entry>
     <entry>
-        <id>http://services.odata.org/V4/OData/OData.svc/Products(9)</id>
+        <id>https://services.odata.org/V4/OData/OData.svc/Products(9)</id>
         <category term="#ODataDemo.FeaturedProduct" scheme="http://docs.oasis-open.org/odata/ns/scheme" />
         <link rel="edit" title="Product" href="Products(9)/ODataDemo.FeaturedProduct" />
         <link rel="http://docs.oasis-open.org/odata/ns/relatedlinks/Categories" type="application/xml" title="Categories" href="Products(9)/ODataDemo.FeaturedProduct/Categories/$ref" />
@@ -277,7 +277,7 @@
         </content>
     </entry>
     <entry>
-        <id>http://services.odata.org/V4/OData/OData.svc/Products(10)</id>
+        <id>https://services.odata.org/V4/OData/OData.svc/Products(10)</id>
         <category term="#ODataDemo.FeaturedProduct" scheme="http://docs.oasis-open.org/odata/ns/scheme" />
         <link rel="edit" title="Product" href="Products(10)/ODataDemo.FeaturedProduct" />
         <link rel="http://docs.oasis-open.org/odata/ns/relatedlinks/Categories" type="application/xml" title="Categories" href="Products(10)/ODataDemo.FeaturedProduct/Categories/$ref" />

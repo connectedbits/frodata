@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe FrOData::Service, vcr: {cassette_name: 'service_specs'} do
-  let(:service_url) { 'http://services.odata.org/V4/OData/OData.svc' }
+  let(:service_url) { 'https://services.odata.org/V4/OData/OData.svc' }
   let(:metadata_file) { 'spec/fixtures/files/metadata.xml' }
   let(:subject) { FrOData::Service.new(service_url, name: 'ODataDemo', metadata_file: metadata_file) }
 

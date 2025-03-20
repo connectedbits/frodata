@@ -2,48 +2,48 @@
 http_interactions:
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/$metadata
+    uri: https://services.odata.org/V4/OData/OData.svc/$metadata
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v0.17.6
       OData-Version:
       - '4.0'
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
+      content-length:
       - '6742'
-      Content-Type:
+      connection:
+      - close
+      content-type:
       - application/xml;charset=utf-8
-      Server:
+      date:
+      - Thu, 20 Mar 2025 17:52:57 GMT
+      server:
       - Microsoft-IIS/10.0
-      X-Content-Type-Options:
-      - nosniff
-      OData-Version:
-      - 4.0;
-      X-AspNet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
+      access-control-allow-headers:
       - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
       - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:30:37 GMT
+      cache-control:
+      - no-cache
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"><edmx:DataServices><Schema
@@ -122,8 +122,6 @@ http_interactions:
         String="http://www.odata.org/" /><Annotation Term="Org.OData.Publication.V1.LastModified"
         String="4/2/2013" /><Annotation Term="Org.OData.Publication.V1.ImageUrl "
         String="http://www.odata.org/" /></Annotations></Schema></edmx:DataServices></edmx:Edmx>
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/$metadata
-  recorded_at: Tue, 16 Jan 2018 20:30:39 GMT
-recorded_with: VCR 2.9.3
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:52:58 GMT
+recorded_with: VCR 4.0.0

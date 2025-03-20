@@ -2,48 +2,48 @@
 http_interactions:
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/$metadata
+    uri: https://services.odata.org/V4/OData/OData.svc/$metadata
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v0.17.6
       OData-Version:
       - '4.0'
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
+      content-length:
       - '6742'
-      Content-Type:
+      connection:
+      - close
+      content-type:
       - application/xml;charset=utf-8
-      Server:
+      date:
+      - Thu, 20 Mar 2025 17:53:09 GMT
+      server:
       - Microsoft-IIS/10.0
-      X-Content-Type-Options:
-      - nosniff
-      OData-Version:
-      - 4.0;
-      X-AspNet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
+      access-control-allow-headers:
       - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
       - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:30:37 GMT
+      cache-control:
+      - no-cache
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"><edmx:DataServices><Schema
@@ -122,274 +122,372 @@ http_interactions:
         String="http://www.odata.org/" /><Annotation Term="Org.OData.Publication.V1.LastModified"
         String="4/2/2013" /><Annotation Term="Org.OData.Publication.V1.ImageUrl "
         String="http://www.odata.org/" /></Annotations></Schema></edmx:DataServices></edmx:Edmx>
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/$metadata
-  recorded_at: Tue, 16 Jan 2018 20:30:38 GMT
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:09 GMT
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products(1)
+    uri: https://services.odata.org/V4/OData/OData.svc/Products(2)
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v0.17.6
+      Authorization:
+      - Basic dXNlcm5hbWU6cGFzc3dvcmQ=
       OData-Version:
       - '4.0'
-      Accept:
-      - application/atom+xml,application/json,text/plain
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
-      - '226'
-      Content-Type:
+      content-length:
+      - '257'
+      connection:
+      - close
+      content-type:
       - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      Server:
+      date:
+      - Thu, 20 Mar 2025 17:53:09 GMT
+      server:
       - Microsoft-IIS/10.0
-      X-Content-Type-Options:
-      - nosniff
-      OData-Version:
-      - 4.0;
-      X-AspNet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
+      access-control-allow-headers:
       - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
       - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:30:37 GMT
+      cache-control:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
     body:
-      encoding: UTF-8
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products/$entity","ID":1,"Name":"Milk","Description":"Low
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://services.odata.org/V4/OData/OData.svc/$metadata#Products/$entity","ID":2,"Name":"Vint
+        soda","Description":"Americana Variety - Mix of 6 flavors","ReleaseDate":"2000-10-01T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":20.9}'
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:10 GMT
+- request:
+    method: get
+    uri: https://services.odata.org/V4/OData/OData.svc/Products(3)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.6
+      Authorization:
+      - Bearer token
+      OData-Version:
+      - '4.0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-length:
+      - '267'
+      connection:
+      - close
+      content-type:
+      - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
+      date:
+      - Thu, 20 Mar 2025 17:53:10 GMT
+      server:
+      - Microsoft-IIS/10.0
+      access-control-allow-headers:
+      - Accept, Origin, Content-Type, MaxDataServiceVersion
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - DataServiceVersion
+      cache-control:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://services.odata.org/V4/OData/OData.svc/$metadata#Products/$entity","ID":3,"Name":"Havina
+        Cola","Description":"The Original Key Lime Cola","ReleaseDate":"2005-10-01T00:00:00Z","DiscontinuedDate":"2006-10-01T00:00:00Z","Rating":3,"Price":19.9}'
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:10 GMT
+- request:
+    method: get
+    uri: https://services.odata.org/V4/OData/OData.svc/Products(1)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.6
+      OData-Version:
+      - '4.0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-length:
+      - '227'
+      connection:
+      - close
+      content-type:
+      - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
+      date:
+      - Thu, 20 Mar 2025 17:53:10 GMT
+      server:
+      - Microsoft-IIS/10.0
+      access-control-allow-headers:
+      - Accept, Origin, Content-Type, MaxDataServiceVersion
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - DataServiceVersion
+      cache-control:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://services.odata.org/V4/OData/OData.svc/$metadata#Products/$entity","ID":1,"Name":"Milk","Description":"Low
         fat milk","ReleaseDate":"1995-10-01T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":3.5}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/Products(1)
-  recorded_at: Tue, 16 Jan 2018 20:30:38 GMT
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:10 GMT
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products/$count
+    uri: https://services.odata.org/V4/OData/OData.svc/Products/$count
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v0.17.6
       OData-Version:
       - '4.0'
-      Accept:
-      - application/atom+xml,application/json,text/plain
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
+      content-length:
       - '2'
-      Content-Type:
+      connection:
+      - close
+      content-type:
       - text/plain;charset=utf-8
-      Server:
+      date:
+      - Thu, 20 Mar 2025 17:53:10 GMT
+      server:
       - Microsoft-IIS/10.0
-      X-Content-Type-Options:
-      - nosniff
-      OData-Version:
-      - 4.0;
-      X-AspNet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
+      access-control-allow-headers:
       - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
       - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:30:37 GMT
+      cache-control:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '11'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/Products/$count
-  recorded_at: Tue, 16 Jan 2018 20:30:38 GMT
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:11 GMT
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products?$top=1
+    uri: https://services.odata.org/V4/OData/OData.svc/Products?%24top=1
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v0.17.6
       OData-Version:
       - '4.0'
-      Accept:
-      - application/atom+xml,application/json,text/plain
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
-      - '236'
-      Content-Type:
+      content-length:
+      - '237'
+      connection:
+      - close
+      content-type:
       - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      Server:
+      date:
+      - Thu, 20 Mar 2025 17:53:11 GMT
+      server:
       - Microsoft-IIS/10.0
-      X-Content-Type-Options:
-      - nosniff
-      OData-Version:
-      - 4.0;
-      X-AspNet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
+      access-control-allow-headers:
       - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
       - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:30:37 GMT
+      cache-control:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
     body:
-      encoding: UTF-8
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":0,"Name":"Bread","Description":"Whole
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":0,"Name":"Bread","Description":"Whole
         grain bread","ReleaseDate":"1992-01-01T00:00:00Z","DiscontinuedDate":null,"Rating":4,"Price":2.5}]}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/Products?$top=1
-  recorded_at: Tue, 16 Jan 2018 20:30:38 GMT
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:11 GMT
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products?$top=1
+    uri: https://services.odata.org/V4/OData/OData.svc/Products?%24top=1
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v0.17.6
       OData-Version:
       - '4.0'
-      Accept:
-      - application/atom+xml,application/json,text/plain
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
-      - '236'
-      Content-Type:
+      content-length:
+      - '237'
+      connection:
+      - close
+      content-type:
       - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      Server:
+      date:
+      - Thu, 20 Mar 2025 17:53:11 GMT
+      server:
       - Microsoft-IIS/10.0
-      X-Content-Type-Options:
-      - nosniff
-      OData-Version:
-      - 4.0;
-      X-AspNet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
+      access-control-allow-headers:
       - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
       - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:30:37 GMT
+      cache-control:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
     body:
-      encoding: UTF-8
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":0,"Name":"Bread","Description":"Whole
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":0,"Name":"Bread","Description":"Whole
         grain bread","ReleaseDate":"1992-01-01T00:00:00Z","DiscontinuedDate":null,"Rating":4,"Price":2.5}]}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/Products?$top=1
-  recorded_at: Tue, 16 Jan 2018 20:30:38 GMT
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:11 GMT
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products
+    uri: https://services.odata.org/V4/OData/OData.svc/Products
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v0.17.6
       OData-Version:
       - '4.0'
-      Accept:
-      - application/atom+xml,application/json,text/plain
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
-      - '1981'
-      Content-Type:
+      content-length:
+      - '1982'
+      connection:
+      - close
+      content-type:
       - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      Server:
+      date:
+      - Thu, 20 Mar 2025 17:53:11 GMT
+      server:
       - Microsoft-IIS/10.0
-      X-Content-Type-Options:
-      - nosniff
-      OData-Version:
-      - 4.0;
-      X-AspNet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
+      access-control-allow-headers:
       - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
       - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:30:37 GMT
+      cache-control:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
     body:
-      encoding: UTF-8
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":0,"Name":"Bread","Description":"Whole
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":0,"Name":"Bread","Description":"Whole
         grain bread","ReleaseDate":"1992-01-01T00:00:00Z","DiscontinuedDate":null,"Rating":4,"Price":2.5},{"ID":1,"Name":"Milk","Description":"Low
         fat milk","ReleaseDate":"1995-10-01T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":3.5},{"ID":2,"Name":"Vint
         soda","Description":"Americana Variety - Mix of 6 flavors","ReleaseDate":"2000-10-01T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":20.9},{"ID":3,"Name":"Havina
@@ -401,336 +499,272 @@ http_interactions:
         HDTV","Description":"42 inch 1080p LCD with Built-in Blu-ray Disc Player","ReleaseDate":"2008-05-08T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":1088.8},{"@odata.type":"#ODataDemo.FeaturedProduct","ID":9,"Name":"Lemonade","Description":"Classic,
         refreshing lemonade (Single bottle)","ReleaseDate":"1970-01-01T00:00:00Z","DiscontinuedDate":null,"Rating":7,"Price":1.01},{"@odata.type":"#ODataDemo.FeaturedProduct","ID":10,"Name":"Coffee","Description":"Bulk
         size can of instant coffee","ReleaseDate":"1982-12-31T00:00:00Z","DiscontinuedDate":null,"Rating":1,"Price":6.99}]}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/Products
-  recorded_at: Tue, 16 Jan 2018 20:30:38 GMT
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:11 GMT
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products?$filter=Name%20eq%20'Milk'
+    uri: https://services.odata.org/V4/OData/OData.svc/Products?%24top=5
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v0.17.6
       OData-Version:
       - '4.0'
-      Accept:
-      - application/atom+xml,application/json,text/plain
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
-      - '230'
-      Content-Type:
+      content-length:
+      - '889'
+      connection:
+      - close
+      content-type:
       - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      Server:
+      date:
+      - Thu, 20 Mar 2025 17:53:11 GMT
+      server:
       - Microsoft-IIS/10.0
-      X-Content-Type-Options:
-      - nosniff
-      OData-Version:
-      - 4.0;
-      X-AspNet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
+      access-control-allow-headers:
       - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
       - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:30:37 GMT
-    body:
-      encoding: UTF-8
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":1,"Name":"Milk","Description":"Low
-        fat milk","ReleaseDate":"1995-10-01T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":3.5}]}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/Products?$filter=Name%20eq%20'Milk'
-  recorded_at: Tue, 16 Jan 2018 20:30:38 GMT
-- request:
-    method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products?$top=5
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-      OData-Version:
-      - '4.0'
-      Accept:
-      - application/atom+xml,application/json,text/plain
-      Expect:
-      - ''
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
+      cache-control:
       - no-cache
-      Content-Length:
-      - '888'
-      Content-Type:
-      - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      Server:
-      - Microsoft-IIS/10.0
-      X-Content-Type-Options:
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
       - nosniff
-      OData-Version:
+      odata-version:
       - 4.0;
-      X-AspNet-Version:
+      x-aspnet-version:
       - 4.0.30319
-      X-Powered-By:
+      x-powered-by:
       - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
-      - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
-      - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:30:37 GMT
     body:
-      encoding: UTF-8
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":0,"Name":"Bread","Description":"Whole
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":0,"Name":"Bread","Description":"Whole
         grain bread","ReleaseDate":"1992-01-01T00:00:00Z","DiscontinuedDate":null,"Rating":4,"Price":2.5},{"ID":1,"Name":"Milk","Description":"Low
         fat milk","ReleaseDate":"1995-10-01T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":3.5},{"ID":2,"Name":"Vint
         soda","Description":"Americana Variety - Mix of 6 flavors","ReleaseDate":"2000-10-01T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":20.9},{"ID":3,"Name":"Havina
         Cola","Description":"The Original Key Lime Cola","ReleaseDate":"2005-10-01T00:00:00Z","DiscontinuedDate":"2006-10-01T00:00:00Z","Rating":3,"Price":19.9},{"ID":4,"Name":"Fruit
         Punch","Description":"Mango flavor, 8.3 Ounce Cans (Pack of 24)","ReleaseDate":"2003-01-05T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":22.99}]}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/Products?$top=5
-  recorded_at: Tue, 16 Jan 2018 20:30:39 GMT
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:12 GMT
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products?$skip=5&$top=5
+    uri: https://services.odata.org/V4/OData/OData.svc/Products?%24skip=5&%24top=5
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v0.17.6
       OData-Version:
       - '4.0'
-      Accept:
-      - application/atom+xml,application/json,text/plain
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
-      - '985'
-      Content-Type:
+      content-length:
+      - '986'
+      connection:
+      - close
+      content-type:
       - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      Server:
+      date:
+      - Thu, 20 Mar 2025 17:53:12 GMT
+      server:
       - Microsoft-IIS/10.0
-      X-Content-Type-Options:
-      - nosniff
-      OData-Version:
-      - 4.0;
-      X-AspNet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
+      access-control-allow-headers:
       - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
       - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:30:37 GMT
+      cache-control:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
     body:
-      encoding: UTF-8
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":5,"Name":"Cranberry
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":5,"Name":"Cranberry
         Juice","Description":"16-Ounce Plastic Bottles (Pack of 12)","ReleaseDate":"2006-08-04T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":22.8},{"ID":6,"Name":"Pink
         Lemonade","Description":"36 Ounce Cans (Pack of 3)","ReleaseDate":"2006-11-05T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":18.8},{"ID":7,"Name":"DVD
         Player","Description":"1080P Upconversion DVD Player","ReleaseDate":"2006-11-15T00:00:00Z","DiscontinuedDate":null,"Rating":5,"Price":35.88},{"ID":8,"Name":"LCD
         HDTV","Description":"42 inch 1080p LCD with Built-in Blu-ray Disc Player","ReleaseDate":"2008-05-08T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":1088.8},{"@odata.type":"#ODataDemo.FeaturedProduct","ID":9,"Name":"Lemonade","Description":"Classic,
         refreshing lemonade (Single bottle)","ReleaseDate":"1970-01-01T00:00:00Z","DiscontinuedDate":null,"Rating":7,"Price":1.01}]}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/Products?$skip=5&$top=5
-  recorded_at: Tue, 16 Jan 2018 20:30:39 GMT
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:12 GMT
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products?$skip=10&$top=5
+    uri: https://services.odata.org/V4/OData/OData.svc/Products?%24skip=10&%24top=5
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v0.17.6
       OData-Version:
       - '4.0'
-      Accept:
-      - application/atom+xml,application/json,text/plain
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
-      - '296'
-      Content-Type:
+      content-length:
+      - '297'
+      connection:
+      - close
+      content-type:
       - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      Server:
+      date:
+      - Thu, 20 Mar 2025 17:53:12 GMT
+      server:
       - Microsoft-IIS/10.0
-      X-Content-Type-Options:
-      - nosniff
-      OData-Version:
-      - 4.0;
-      X-AspNet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
+      access-control-allow-headers:
       - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
       - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:30:37 GMT
+      cache-control:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
     body:
-      encoding: UTF-8
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"@odata.type":"#ODataDemo.FeaturedProduct","ID":10,"Name":"Coffee","Description":"Bulk
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"@odata.type":"#ODataDemo.FeaturedProduct","ID":10,"Name":"Coffee","Description":"Bulk
         size can of instant coffee","ReleaseDate":"1982-12-31T00:00:00Z","DiscontinuedDate":null,"Rating":1,"Price":6.99}]}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/Products?$skip=10&$top=5
-  recorded_at: Tue, 16 Jan 2018 20:30:39 GMT
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:12 GMT
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products?$skip=15&$top=5
+    uri: https://services.odata.org/V4/OData/OData.svc/Products?%24skip=15&%24top=5
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v0.17.6
       OData-Version:
       - '4.0'
-      Accept:
-      - application/atom+xml,application/json,text/plain
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
-      - '95'
-      Content-Type:
+      content-length:
+      - '96'
+      connection:
+      - close
+      content-type:
       - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      Server:
+      date:
+      - Thu, 20 Mar 2025 17:53:12 GMT
+      server:
       - Microsoft-IIS/10.0
-      X-Content-Type-Options:
-      - nosniff
-      OData-Version:
-      - 4.0;
-      X-AspNet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
+      access-control-allow-headers:
       - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
       - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:30:37 GMT
+      cache-control:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
     body:
-      encoding: UTF-8
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[]}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/Products?$skip=15&$top=5
-  recorded_at: Tue, 16 Jan 2018 20:30:39 GMT
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[]}'
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:12 GMT
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products?$orderby=Name
+    uri: https://services.odata.org/V4/OData/OData.svc/Products?%24orderby=Name
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v0.17.6
       OData-Version:
       - '4.0'
-      Accept:
-      - application/atom+xml,application/json,text/plain
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Content-Length:
-      - '1981'
-      Content-Type:
+      content-length:
+      - '1982'
+      connection:
+      - close
+      content-type:
       - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      Server:
+      date:
+      - Thu, 20 Mar 2025 17:53:13 GMT
+      server:
       - Microsoft-IIS/10.0
-      X-Content-Type-Options:
-      - nosniff
-      OData-Version:
-      - 4.0;
-      X-AspNet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET
-      Access-Control-Allow-Headers:
+      access-control-allow-headers:
       - Accept, Origin, Content-Type, MaxDataServiceVersion
-      Access-Control-Expose-Headers:
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
       - DataServiceVersion
-      Date:
-      - Tue, 16 Jan 2018 20:30:37 GMT
+      cache-control:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      odata-version:
+      - 4.0;
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
     body:
-      encoding: UTF-8
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":0,"Name":"Bread","Description":"Whole
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":0,"Name":"Bread","Description":"Whole
         grain bread","ReleaseDate":"1992-01-01T00:00:00Z","DiscontinuedDate":null,"Rating":4,"Price":2.5},{"@odata.type":"#ODataDemo.FeaturedProduct","ID":10,"Name":"Coffee","Description":"Bulk
         size can of instant coffee","ReleaseDate":"1982-12-31T00:00:00Z","DiscontinuedDate":null,"Rating":1,"Price":6.99},{"ID":5,"Name":"Cranberry
         Juice","Description":"16-Ounce Plastic Bottles (Pack of 12)","ReleaseDate":"2006-08-04T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":22.8},{"ID":7,"Name":"DVD
@@ -742,23 +776,17 @@ http_interactions:
         fat milk","ReleaseDate":"1995-10-01T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":3.5},{"ID":6,"Name":"Pink
         Lemonade","Description":"36 Ounce Cans (Pack of 3)","ReleaseDate":"2006-11-05T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":18.8},{"ID":2,"Name":"Vint
         soda","Description":"Americana Variety - Mix of 6 flavors","ReleaseDate":"2000-10-01T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":20.9}]}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: http://services.odata.org/V4/OData/OData.svc/Products?$orderby=Name
-  recorded_at: Tue, 16 Jan 2018 20:30:39 GMT
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:13 GMT
 - request:
     method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products?%24filter=Name+eq+%27Milk%27
+    uri: https://services.odata.org/V4/OData/OData.svc/Products?%24filter=Name+eq+%27Milk%27
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.15.0
-      Accept:
-      - application/atom+xml,application/json,application/xml,text/plain
-      Content-Type:
-      - application/atom+xml,application/json,application/xml,text/plain
+      - Faraday v0.17.6
       OData-Version:
       - '4.0'
   response:
@@ -766,16 +794,28 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      cache-control:
-      - no-cache
       content-length:
-      - '304'
+      - '231'
+      connection:
+      - close
       content-type:
       - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      vary:
-      - Accept-Encoding
+      date:
+      - Thu, 20 Mar 2025 17:53:13 GMT
       server:
       - Microsoft-IIS/10.0
+      access-control-allow-headers:
+      - Accept, Origin, Content-Type, MaxDataServiceVersion
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - DataServiceVersion
+      cache-control:
+      - no-cache
+      vary:
+      - Accept-Encoding
       x-content-type-options:
       - nosniff
       odata-version:
@@ -784,547 +824,10 @@ http_interactions:
       - 4.0.30319
       x-powered-by:
       - ASP.NET
-      access-control-allow-origin:
-      - "*"
-      access-control-allow-methods:
-      - GET
-      access-control-allow-headers:
-      - Accept, Origin, Content-Type, MaxDataServiceVersion
-      access-control-expose-headers:
-      - DataServiceVersion
-      date:
-      - Tue, 24 Apr 2018 01:58:50 GMT
-      connection:
-      - close
     body:
       encoding: ASCII-8BIT
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":1,"Name":"Milk","Description":"Low
+      string: '{"@odata.context":"https://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":1,"Name":"Milk","Description":"Low
         fat milk","ReleaseDate":"1995-10-01T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":3.5}]}'
-    http_version: 
-  recorded_at: Tue, 24 Apr 2018 01:58:50 GMT
-- request:
-    method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products?%24top=5
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.15.0
-      Accept:
-      - application/atom+xml,application/json,application/xml,text/plain
-      Content-Type:
-      - application/atom+xml,application/json,application/xml,text/plain
-      OData-Version:
-      - '4.0'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      cache-control:
-      - no-cache
-      content-length:
-      - '523'
-      content-type:
-      - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      vary:
-      - Accept-Encoding
-      server:
-      - Microsoft-IIS/10.0
-      x-content-type-options:
-      - nosniff
-      odata-version:
-      - 4.0;
-      x-aspnet-version:
-      - 4.0.30319
-      x-powered-by:
-      - ASP.NET
-      access-control-allow-origin:
-      - "*"
-      access-control-allow-methods:
-      - GET
-      access-control-allow-headers:
-      - Accept, Origin, Content-Type, MaxDataServiceVersion
-      access-control-expose-headers:
-      - DataServiceVersion
-      date:
-      - Tue, 24 Apr 2018 01:58:50 GMT
-      connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":0,"Name":"Bread","Description":"Whole
-        grain bread","ReleaseDate":"1992-01-01T00:00:00Z","DiscontinuedDate":null,"Rating":4,"Price":2.5},{"ID":1,"Name":"Milk","Description":"Low
-        fat milk","ReleaseDate":"1995-10-01T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":3.5},{"ID":2,"Name":"Vint
-        soda","Description":"Americana Variety - Mix of 6 flavors","ReleaseDate":"2000-10-01T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":20.9},{"ID":3,"Name":"Havina
-        Cola","Description":"The Original Key Lime Cola","ReleaseDate":"2005-10-01T00:00:00Z","DiscontinuedDate":"2006-10-01T00:00:00Z","Rating":3,"Price":19.9},{"ID":4,"Name":"Fruit
-        Punch","Description":"Mango flavor, 8.3 Ounce Cans (Pack of 24)","ReleaseDate":"2003-01-05T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":22.99}]}'
-    http_version: 
-  recorded_at: Tue, 24 Apr 2018 01:58:51 GMT
-- request:
-    method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products?%24skip=5&%24top=5
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.15.0
-      Accept:
-      - application/atom+xml,application/json,application/xml,text/plain
-      Content-Type:
-      - application/atom+xml,application/json,application/xml,text/plain
-      OData-Version:
-      - '4.0'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      cache-control:
-      - no-cache
-      content-length:
-      - '578'
-      content-type:
-      - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      vary:
-      - Accept-Encoding
-      server:
-      - Microsoft-IIS/10.0
-      x-content-type-options:
-      - nosniff
-      odata-version:
-      - 4.0;
-      x-aspnet-version:
-      - 4.0.30319
-      x-powered-by:
-      - ASP.NET
-      access-control-allow-origin:
-      - "*"
-      access-control-allow-methods:
-      - GET
-      access-control-allow-headers:
-      - Accept, Origin, Content-Type, MaxDataServiceVersion
-      access-control-expose-headers:
-      - DataServiceVersion
-      date:
-      - Tue, 24 Apr 2018 01:58:50 GMT
-      connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":5,"Name":"Cranberry
-        Juice","Description":"16-Ounce Plastic Bottles (Pack of 12)","ReleaseDate":"2006-08-04T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":22.8},{"ID":6,"Name":"Pink
-        Lemonade","Description":"36 Ounce Cans (Pack of 3)","ReleaseDate":"2006-11-05T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":18.8},{"ID":7,"Name":"DVD
-        Player","Description":"1080P Upconversion DVD Player","ReleaseDate":"2006-11-15T00:00:00Z","DiscontinuedDate":null,"Rating":5,"Price":35.88},{"ID":8,"Name":"LCD
-        HDTV","Description":"42 inch 1080p LCD with Built-in Blu-ray Disc Player","ReleaseDate":"2008-05-08T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":1088.8},{"@odata.type":"#ODataDemo.FeaturedProduct","ID":9,"Name":"Lemonade","Description":"Classic,
-        refreshing lemonade (Single bottle)","ReleaseDate":"1970-01-01T00:00:00Z","DiscontinuedDate":null,"Rating":7,"Price":1.01}]}'
-    http_version: 
-  recorded_at: Tue, 24 Apr 2018 01:58:51 GMT
-- request:
-    method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products?%24skip=10&%24top=5
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.15.0
-      Accept:
-      - application/atom+xml,application/json,application/xml,text/plain
-      Content-Type:
-      - application/atom+xml,application/json,application/xml,text/plain
-      OData-Version:
-      - '4.0'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      cache-control:
-      - no-cache
-      content-length:
-      - '343'
-      content-type:
-      - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      vary:
-      - Accept-Encoding
-      server:
-      - Microsoft-IIS/10.0
-      x-content-type-options:
-      - nosniff
-      odata-version:
-      - 4.0;
-      x-aspnet-version:
-      - 4.0.30319
-      x-powered-by:
-      - ASP.NET
-      access-control-allow-origin:
-      - "*"
-      access-control-allow-methods:
-      - GET
-      access-control-allow-headers:
-      - Accept, Origin, Content-Type, MaxDataServiceVersion
-      access-control-expose-headers:
-      - DataServiceVersion
-      date:
-      - Tue, 24 Apr 2018 01:58:50 GMT
-      connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"@odata.type":"#ODataDemo.FeaturedProduct","ID":10,"Name":"Coffee","Description":"Bulk
-        size can of instant coffee","ReleaseDate":"1982-12-31T00:00:00Z","DiscontinuedDate":null,"Rating":1,"Price":6.99}]}'
-    http_version: 
-  recorded_at: Tue, 24 Apr 2018 01:58:51 GMT
-- request:
-    method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products?%24skip=15&%24top=5
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.15.0
-      Accept:
-      - application/atom+xml,application/json,application/xml,text/plain
-      Content-Type:
-      - application/atom+xml,application/json,application/xml,text/plain
-      OData-Version:
-      - '4.0'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      cache-control:
-      - no-cache
-      content-length:
-      - '200'
-      content-type:
-      - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      vary:
-      - Accept-Encoding
-      server:
-      - Microsoft-IIS/10.0
-      x-content-type-options:
-      - nosniff
-      odata-version:
-      - 4.0;
-      x-aspnet-version:
-      - 4.0.30319
-      x-powered-by:
-      - ASP.NET
-      access-control-allow-origin:
-      - "*"
-      access-control-allow-methods:
-      - GET
-      access-control-allow-headers:
-      - Accept, Origin, Content-Type, MaxDataServiceVersion
-      access-control-expose-headers:
-      - DataServiceVersion
-      date:
-      - Tue, 24 Apr 2018 01:58:51 GMT
-      connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[]}'
-    http_version: 
-  recorded_at: Tue, 24 Apr 2018 01:58:51 GMT
-- request:
-    method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products?%24orderby=Name
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.15.0
-      Accept:
-      - application/atom+xml,application/json,application/xml,text/plain
-      Content-Type:
-      - application/atom+xml,application/json,application/xml,text/plain
-      OData-Version:
-      - '4.0'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      cache-control:
-      - no-cache
-      content-length:
-      - '882'
-      content-type:
-      - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      vary:
-      - Accept-Encoding
-      server:
-      - Microsoft-IIS/10.0
-      x-content-type-options:
-      - nosniff
-      odata-version:
-      - 4.0;
-      x-aspnet-version:
-      - 4.0.30319
-      x-powered-by:
-      - ASP.NET
-      access-control-allow-origin:
-      - "*"
-      access-control-allow-methods:
-      - GET
-      access-control-allow-headers:
-      - Accept, Origin, Content-Type, MaxDataServiceVersion
-      access-control-expose-headers:
-      - DataServiceVersion
-      date:
-      - Tue, 24 Apr 2018 01:58:50 GMT
-      connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":0,"Name":"Bread","Description":"Whole
-        grain bread","ReleaseDate":"1992-01-01T00:00:00Z","DiscontinuedDate":null,"Rating":4,"Price":2.5},{"@odata.type":"#ODataDemo.FeaturedProduct","ID":10,"Name":"Coffee","Description":"Bulk
-        size can of instant coffee","ReleaseDate":"1982-12-31T00:00:00Z","DiscontinuedDate":null,"Rating":1,"Price":6.99},{"ID":5,"Name":"Cranberry
-        Juice","Description":"16-Ounce Plastic Bottles (Pack of 12)","ReleaseDate":"2006-08-04T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":22.8},{"ID":7,"Name":"DVD
-        Player","Description":"1080P Upconversion DVD Player","ReleaseDate":"2006-11-15T00:00:00Z","DiscontinuedDate":null,"Rating":5,"Price":35.88},{"ID":4,"Name":"Fruit
-        Punch","Description":"Mango flavor, 8.3 Ounce Cans (Pack of 24)","ReleaseDate":"2003-01-05T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":22.99},{"ID":3,"Name":"Havina
-        Cola","Description":"The Original Key Lime Cola","ReleaseDate":"2005-10-01T00:00:00Z","DiscontinuedDate":"2006-10-01T00:00:00Z","Rating":3,"Price":19.9},{"ID":8,"Name":"LCD
-        HDTV","Description":"42 inch 1080p LCD with Built-in Blu-ray Disc Player","ReleaseDate":"2008-05-08T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":1088.8},{"@odata.type":"#ODataDemo.FeaturedProduct","ID":9,"Name":"Lemonade","Description":"Classic,
-        refreshing lemonade (Single bottle)","ReleaseDate":"1970-01-01T00:00:00Z","DiscontinuedDate":null,"Rating":7,"Price":1.01},{"ID":1,"Name":"Milk","Description":"Low
-        fat milk","ReleaseDate":"1995-10-01T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":3.5},{"ID":6,"Name":"Pink
-        Lemonade","Description":"36 Ounce Cans (Pack of 3)","ReleaseDate":"2006-11-05T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":18.8},{"ID":2,"Name":"Vint
-        soda","Description":"Americana Variety - Mix of 6 flavors","ReleaseDate":"2000-10-01T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":20.9}]}'
-    http_version: 
-  recorded_at: Tue, 24 Apr 2018 01:58:51 GMT
-- request:
-    method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products?%24top=1
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.15.0
-      Accept:
-      - application/atom+xml,application/json,application/xml,text/plain
-      Content-Type:
-      - application/atom+xml,application/json,application/xml,text/plain
-      OData-Version:
-      - '4.0'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      cache-control:
-      - no-cache
-      content-length:
-      - '308'
-      content-type:
-      - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      vary:
-      - Accept-Encoding
-      server:
-      - Microsoft-IIS/10.0
-      x-content-type-options:
-      - nosniff
-      odata-version:
-      - 4.0;
-      x-aspnet-version:
-      - 4.0.30319
-      x-powered-by:
-      - ASP.NET
-      access-control-allow-origin:
-      - "*"
-      access-control-allow-methods:
-      - GET
-      access-control-allow-headers:
-      - Accept, Origin, Content-Type, MaxDataServiceVersion
-      access-control-expose-headers:
-      - DataServiceVersion
-      date:
-      - Tue, 24 Apr 2018 01:58:51 GMT
-      connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":0,"Name":"Bread","Description":"Whole
-        grain bread","ReleaseDate":"1992-01-01T00:00:00Z","DiscontinuedDate":null,"Rating":4,"Price":2.5}]}'
-    http_version: 
-  recorded_at: Tue, 24 Apr 2018 01:58:51 GMT
-- request:
-    method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products?%24top=1
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.15.0
-      Accept:
-      - application/atom+xml,application/json,application/xml,text/plain
-      Content-Type:
-      - application/atom+xml,application/json,application/xml,text/plain
-      OData-Version:
-      - '4.0'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      cache-control:
-      - no-cache
-      content-length:
-      - '308'
-      content-type:
-      - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      vary:
-      - Accept-Encoding
-      server:
-      - Microsoft-IIS/10.0
-      x-content-type-options:
-      - nosniff
-      odata-version:
-      - 4.0;
-      x-aspnet-version:
-      - 4.0.30319
-      x-powered-by:
-      - ASP.NET
-      access-control-allow-origin:
-      - "*"
-      access-control-allow-methods:
-      - GET
-      access-control-allow-headers:
-      - Accept, Origin, Content-Type, MaxDataServiceVersion
-      access-control-expose-headers:
-      - DataServiceVersion
-      date:
-      - Tue, 24 Apr 2018 01:58:51 GMT
-      connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products","value":[{"ID":0,"Name":"Bread","Description":"Whole
-        grain bread","ReleaseDate":"1992-01-01T00:00:00Z","DiscontinuedDate":null,"Rating":4,"Price":2.5}]}'
-    http_version: 
-  recorded_at: Tue, 24 Apr 2018 01:58:51 GMT
-- request:
-    method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products(2)
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.15.0
-      Authorization:
-      - Basic dXNlcm5hbWU6cGFzc3dvcmQ=
-      Accept:
-      - application/atom+xml,application/json,application/xml,text/plain
-      Content-Type:
-      - application/atom+xml,application/json,application/xml,text/plain
-      OData-Version:
-      - '4.0'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      cache-control:
-      - no-cache
-      content-length:
-      - '325'
-      content-type:
-      - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      vary:
-      - Accept-Encoding
-      server:
-      - Microsoft-IIS/10.0
-      x-content-type-options:
-      - nosniff
-      odata-version:
-      - 4.0;
-      x-aspnet-version:
-      - 4.0.30319
-      x-powered-by:
-      - ASP.NET
-      access-control-allow-origin:
-      - "*"
-      access-control-allow-methods:
-      - GET
-      access-control-allow-headers:
-      - Accept, Origin, Content-Type, MaxDataServiceVersion
-      access-control-expose-headers:
-      - DataServiceVersion
-      date:
-      - Thu, 26 Apr 2018 21:29:37 GMT
-      connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products/$entity","ID":2,"Name":"Vint
-        soda","Description":"Americana Variety - Mix of 6 flavors","ReleaseDate":"2000-10-01T00:00:00Z","DiscontinuedDate":null,"Rating":3,"Price":20.9}'
-    http_version: 
-  recorded_at: Thu, 26 Apr 2018 21:29:37 GMT
-- request:
-    method: get
-    uri: http://services.odata.org/V4/OData/OData.svc/Products(3)
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.15.0
-      Authorization:
-      - Bearer token
-      Accept:
-      - application/atom+xml,application/json,application/xml,text/plain
-      Content-Type:
-      - application/atom+xml,application/json,application/xml,text/plain
-      OData-Version:
-      - '4.0'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      cache-control:
-      - no-cache
-      content-length:
-      - '312'
-      content-type:
-      - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
-      vary:
-      - Accept-Encoding
-      server:
-      - Microsoft-IIS/10.0
-      x-content-type-options:
-      - nosniff
-      odata-version:
-      - 4.0;
-      x-aspnet-version:
-      - 4.0.30319
-      x-powered-by:
-      - ASP.NET
-      access-control-allow-origin:
-      - "*"
-      access-control-allow-methods:
-      - GET
-      access-control-allow-headers:
-      - Accept, Origin, Content-Type, MaxDataServiceVersion
-      access-control-expose-headers:
-      - DataServiceVersion
-      date:
-      - Thu, 26 Apr 2018 21:41:27 GMT
-      connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: '{"@odata.context":"http://services.odata.org/V4/OData/OData.svc/$metadata#Products/$entity","ID":3,"Name":"Havina
-        Cola","Description":"The Original Key Lime Cola","ReleaseDate":"2005-10-01T00:00:00Z","DiscontinuedDate":"2006-10-01T00:00:00Z","Rating":3,"Price":19.9}'
-    http_version: 
-  recorded_at: Thu, 26 Apr 2018 21:41:27 GMT
+    http_version:
+  recorded_at: Thu, 20 Mar 2025 17:53:14 GMT
 recorded_with: VCR 4.0.0

@@ -1,5 +1,5 @@
 {
-    "@odata.context": "http://services.odata.org/V4/OData/OData.svc/$metadata#Products/$entity",
+    "@odata.context": "https://services.odata.org/V4/OData/OData.svc/$metadata#Products/$entity",
     "ID": 0,
     "Name": "Bread",
     "Description": "Whole grain bread",
