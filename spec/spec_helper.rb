@@ -29,4 +29,6 @@ RSpec.configure do |config|
     # reasons to have to flush the service registry except in testing.
     FrOData::ServiceRegistry.instance.send(:flush)
   end
+
+  # config.raise_errors_for_deprecations!
 end

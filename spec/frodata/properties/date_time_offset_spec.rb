@@ -16,15 +16,15 @@ describe FrOData::Properties::DateTimeOffset do
     subject.value
   }.call).to eq(new_datetime) }
 
-  it { expect(lambda {
+  it { expect {
     subject.value = nil
-  }).not_to raise_error }
+  }.not_to raise_error }
 
   context 'with allows_nil option set to false' do
     let(:subject) { FrOData::Properties::DateTimeOffset.new('DateTime', '2000-01-01T16:00:00Z-09:00', allows_nil: false) }
 
-    it { expect(lambda {
+    it { expect {
       subject.value = nil
-    }).to raise_error(ArgumentError) }
+    }.to raise_error(ArgumentError) }
   end
 end
